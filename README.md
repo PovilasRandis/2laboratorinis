@@ -45,4 +45,4 @@ Galutinis vidurkis yra apskaičiuojamas pagal formulę `galutinis = 0.4 * vidurk
 
 ### Changelog
 
-- [v0.2](https://github.com/PovilasRandis/2laboratorinis/releases/tag/v0.1) - Pradinė programos versija
+- [v0.2](https://github.com/PovilasRandis/2laboratorinis/releases/tag/v0.2) - Antroji programos versija
