@@ -7,7 +7,7 @@ Programa yra skirta apskaičiuoti pažymių vidurkį arba medianą.
 Paleidus programą komandinėje eilutėje yra prašoma atlikti keletą veiksmų:
 
 - Prašoma pasirinkti ar norite, jog duomenys būtų nuskaityti iš failo.
-............Arba.............
+------------Arba------------
 - Suvesti duomenis (t.y. vardas, pavardė, namu darbu pažymiai, egzamino įvertinimas)
 - Po duomenų suvedimo yra apskaičiuojamas galutinis pažymis įvertinimų vidurkiu arba mediana.
 
