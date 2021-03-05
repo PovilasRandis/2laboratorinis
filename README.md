@@ -6,6 +6,8 @@ Programa yra skirta apskaičiuoti pažymių vidurkį arba medianą.
 
 Paleidus programą komandinėje eilutėje yra prašoma atlikti keletą veiksmų:
 
+- Prašoma pasirinkti ar norite, jog duomenys būtų nuskaityti iš failo.
+............Arba.............
 - Suvesti duomenis (t.y. vardas, pavardė, namu darbu pažymiai, egzamino įvertinimas)
 - Po duomenų suvedimo yra apskaičiuojamas galutinis pažymis įvertinimų vidurkiu arba mediana.
 
@@ -16,8 +18,9 @@ Paleidus programą, prašome sekti komandinėje eilutėje nurodytus instrukcijas
 Vienas iš galimymų programos eigos variantų yra toks:
 
 ```shell
--> Please enter first name: Vardenis
--> Please enter last name: Pavardenis
+-> Ar norite skaityti duomenis iš tekstinio failo[y/n]:
+-> Įveskite 1 studento vardą: Vardenis
+-> Įveskite 1 studento pavardę: Pavardenis
 -> 1 studento 1 namu darbo ivertinimas [0-10], (Jei norite gauti atsitiktini skaiciu, iveskite y): 
 -> 1 studento 2 namu darbo ivertinimas [0-10], (Jei norite gauti atsitiktini skaiciu, iveskite y):
 -> Ar prideti dar viena studenta? [Y/N]: 
@@ -43,3 +46,5 @@ Galutinis vidurkis yra apskaičiuojamas pagal formulę `galutinis = 0.4 * vidurk
 ### Changelog
 
 - [v0.1](https://github.com/PovilasRandis/2laboratorinis/releases/tag/v0.1) - Pradinė programos versija
+- [v0.1](https://github.com/PovilasRandis/2laboratorinis/releases/tag/v0.2) - Antroji programos versija. Papildyta, jog būtų galima skaityti duomenis iš failų ir išvesti rezultatus į failą.
+- [v0.3](https://github.com/PovilasRandis/2laboratorinis/releases/tag/v0.3) Šioje versijoje main.cpp buvęs kodas išskirstytas į kelis skirtingus failus(pvz. funkcijos yra funkcijos.cpp faile, struktūra header faile ir t.t.). Taip pat, kodas buvo patobulintas realizuojant išimčių (Exception) valdymą.
