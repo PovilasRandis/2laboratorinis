@@ -1,23 +1,27 @@
 # Pažymių vidurkio skaičiuoklė
 
-Programa yra skirta apskaičiuoti pažymių vidurkį arba medianą.
+Programa yra skirta apskaičiuoti pažymių vidurkį arba medianą. Taip pat galima pasirinkti sugeneruoti duomenų failą bei surušiuoti studentus į "kietus" ir "minkštus" pagal jų galutinį balą.
 
 ## Veikimo principas
 
 Paleidus programą komandinėje eilutėje yra prašoma atlikti keletą veiksmų:
 
-- Prašoma pasirinkti ar norite, jog duomenys būtų nuskaityti iš failo.
-- -----------Arba------------
-- Suvesti duomenis (t.y. vardas, pavardė, namu darbu pažymiai, egzamino įvertinimas)
-- Po duomenų suvedimo yra apskaičiuojamas galutinis pažymis įvertinimų vidurkiu arba mediana.
+- Pasirinkti ar norima, kad duomenų failai būtų sugeneruoti
+- Pasirinkti ar skaityti duomenis iš failo (jei taip, tai nurodyti failą ir keliauti į paskutinį žingsnį)
+- Pasirinkti ar balus generuoti atsitiktinai
+- Įrašyti studento vardą ir pavardę
+- Jei balai negeneruojami atsitiktinai, tai juos įrašyti
+- Pasirinkti ar pridėti naują studentą (jei taip, tai viskas kartojasi nuo 2 žingsnio)
+- Pasirinkti ar skaičiuoti vidurkį ar medianą
 
-Programa suteikia galimybę generuoti atsitiktinius namų darbų rezultatus bei egzamino balą, bei suvesti daugiau nei vieno studento duomenis.
+Programa suteikia galimybę generuoti atsitiktinius namų darbų rezultatus bei egzamino balą suvesti daugiau nei vieno studento duomenis bei generuoti duomenų failus.
 
 Paleidus programą, prašome sekti komandinėje eilutėje nurodytus instrukcijas.
 
 Vienas iš galimymų programos eigos variantų yra toks:
 
 ```shell
+-> Ar norite sukurti duomenų failą[y/n]:
 -> Ar norite skaityti duomenis iš tekstinio failo[y/n]:
 -> Įveskite 1 studento vardą: Vardenis
 -> Įveskite 1 studento pavardę: Pavardenis
@@ -27,7 +31,7 @@ Vienas iš galimymų programos eigos variantų yra toks:
 -> Rodyti vidurki ar mediana? [V/M]:
 ```
 
-Po sėkmingo duomenų suvedimo į terminalo langą išvedami rezultatai panašia forma:
+Po sėkmingo duomenų suvedimo į rezultatų failą išvedami rezultatai panašia forma:
 
 ```shell
 Vardas      Pavarde         Galutinis Vid. Galutinis Med.
@@ -48,3 +52,4 @@ Galutinis vidurkis yra apskaičiuojamas pagal formulę `galutinis = 0.4 * vidurk
 - [v0.1](https://github.com/PovilasRandis/2laboratorinis/releases/tag/v0.1) - Pradinė programos versija
 - [v0.1](https://github.com/PovilasRandis/2laboratorinis/releases/tag/v0.2) - Antroji programos versija. Papildyta, jog būtų galima skaityti duomenis iš failų ir išvesti rezultatus į failą.
 - [v0.3](https://github.com/PovilasRandis/2laboratorinis/releases/tag/v0.3) Šioje versijoje main.cpp buvęs kodas išskirstytas į kelis skirtingus failus(pvz. funkcijos yra funkcijos.cpp faile, struktūra header faile ir t.t.). Taip pat, kodas buvo patobulintas realizuojant išimčių (Exception) valdymą.
+- [v0.4](https://github.com/PovilasRandis/2laboratorinis/releases/tag/v0.4) Šioje versijoje buvo pridėta galimybė generuoti duomenų failus, studentai pagal savo galutinį balą skirstomi į 2 grupes("Kietus" ir "Minkštus"). Taip pat matuojamas tam tikrų operacijų atlikimo laikas.
