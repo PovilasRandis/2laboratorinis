@@ -120,15 +120,15 @@ void Isvedimas(vector<Studentas>& A, double Laik[]){
     vector<Studentas> Sup;
     vector<Studentas> Inf;
 
-    auto start = system_clock::now();               // Rusiavimas i 2 grupes
+    auto start = system_clock::now();               
     Rusiavimas(A, Sup, Inf, VidMed, Laik);
     auto end = system_clock::now();
     duration<double> diff = end - start;
     Laik[2] = diff.count();
 
-    start = system_clock::now();                   // Isvedimas
+    start = system_clock::now();                   
 
-    ofstream outS("RezultataiSup.txt");
+    ofstream outS("RezultataiSup.txt");		//rezultatu failu atidarymas
     ofstream outI("RezultataiInf.txt");
     if (toupper(VidMed) == 'V'){
         outS << "Pavarde                  Vardas             Galutinis (Vid.)" << endl;
@@ -145,13 +145,13 @@ void Isvedimas(vector<Studentas>& A, double Laik[]){
 
     for (int i=0; i<Inf.size(); i++)
         outI <<fixed<<left<<setw(25)<< Inf[i].vardas <<setw(25)<< Inf[i].pavarde << Inf[i].final << endl;
-    outS.close();
+    outS.close();		//rezultatu failu uzdarymas
     outI.close();
 
     end = system_clock::now();
     diff = end - start;
     Laik[3] = diff.count();
-
+	//laiko matavimu rezultatu isvedimas
     if (Laik[0] != 0)
         cout << endl << "Duomenu generavimo ir irasymo i faila laikas: " << Laik[0] << " s" << endl;
     if (Laik[1] != 0)
