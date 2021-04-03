@@ -59,14 +59,15 @@ Galutinis vidurkis yra apskaičiuojamas pagal formulę `galutinis = 0.4 * vidurk
 
 ---
 Spartos tikrinimas naudojant skirtingus konteinerių tipus.
-#Duomenų skaitymo laikai
+
+# Duomenų skaitymo laikai
 | Container   | 1.000   | 10.000  | 100.000   | 1.000.000  | 10.000.000 |
 | :---------- | :------ | :------ | :-------- | :--------  | :--------  | 
 | std::deque  | 0.12392 | 0.08896 | 0.67161   | 6.80709    | 66.5387    |
 | std::list   | 0.11495 | 0.09494 | 0.67161   | 6.55124    | 69.6191    |
 | std::vector | 0.11393 | 0.07797 | 0.68260   | 6.57023    | 69.2707    |
 
-#Duomenų rūšiavimo laikai
+# Duomenų rūšiavimo laikai
 
 | Container   | 1.000   | 10.000  | 100.000   | 1.000.000  | 10.000.000 |
 | :---------- | :------ | :------ | :-------- | :--------  | :--------  | 
