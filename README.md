@@ -91,3 +91,4 @@ Spartos tikrinimas atliktas su Processor	Intel(R) Core(TM) i5-4210U CPU @ 1.70GH
 - [v0.3](https://github.com/PovilasRandis/2laboratorinis/releases/tag/v0.3) Šioje versijoje main.cpp buvęs kodas išskirstytas į kelis skirtingus failus(pvz. funkcijos yra funkcijos.cpp faile, struktūra header faile ir t.t.). Taip pat, kodas buvo patobulintas realizuojant išimčių (Exception) valdymą.
 - [v0.4](https://github.com/PovilasRandis/2laboratorinis/releases/tag/v0.4) Šioje versijoje buvo pridėta galimybė generuoti duomenų failus, studentai pagal savo galutinį balą skirstomi į 2 grupes("Kietus" ir "Minkštus"). Taip pat matuojamas tam tikrų operacijų atlikimo laikas.
 - [v0.5](https://github.com/PovilasRandis/2laboratorinis/releases/tag/v0.5) Šioje versijoje buvo pridėta galimybė duomenis saugoti į skirtingus konteinerių tipus.
+- [v1.0](https://github.com/PovilasRandis/2laboratorinis/releases/tag/v1.0) Šioje versijoje buvo pridėta galimybė skirstyti studentus dviems būdais.
