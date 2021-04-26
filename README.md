@@ -42,7 +42,7 @@ Vardenis    Pavardenis      5.25
 Galutinis vidurkis yra apskaičiuojamas pagal formulę `galutinis = 0.4 * vidurkis + 0.6 * egzaminas`.
 #### 1 Strategija
 
-Konteinerio skirstymo laikas (s) į du naujus to paties tipo konteinerius. 
+Konteinerio skirstymo laikas į du naujus konteinerius. 
 | Konteineriai             | 1.000 | 10.000 | 100.000 | 1.000.000 |
 | :---------------------------- | :------ | :------ | :-------- | :--------- | 
 | vector  | 0.0090 | 0.0084 | 0.0779   | 0.8325   |
@@ -53,7 +53,7 @@ Konteinerio skirstymo laikas (s) į du naujus to paties tipo konteinerius.
 
 #### 2 Strategija
 
-Konteinerio skirstymo laikas (s), kai sename konteineryje paliekami pažengę studentai, o į naują perkeliami atsilikę studentai.
+Konteinerio skirstymo laikas, kai sename konteineryje paliekami geresni studentai, o į naują perkeliami prastesni studentai.
 
 | Konteineriai  | 1.000  | 10.000  | 100.000 | 1.000.000 | 
 | :---------------------------- | :------ | :------ | :-------- | :--------- |
