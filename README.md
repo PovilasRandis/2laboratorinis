@@ -40,22 +40,26 @@ Vardenis    Pavardenis      5.25
 ```
 
 Galutinis vidurkis yra apskaičiuojamas pagal formulę `galutinis = 0.4 * vidurkis + 0.6 * egzaminas`.
-### Duomenų generavimo laikai
-| Studentų sk.       | 1000    | 10,000  | 100,000   | 1,000,000  | 10,000,000 |
-| :----------    | :------ | :------ | :-------- | :--------- | :--------- |
-| Laikas (s)  | 0.0165 | 0.0505 | 0.47   | 4.8615    | 39.259    |
-### Duomenų skaitymo laikai
-| Studentų sk.       | 1000    | 10,000  | 100,000   | 1,000,000  | 10,000,000 |
-| :----------    | :------ | :------ | :-------- | :--------- | :--------- |
-| Laikas (s)  | 0.003 | 0.023 | 0.2235   | 2.207    | 12.2178    |
-### Studentų rūšiavimo laikai
-| Studentų sk.       | 1000    | 10,000  | 100,000   | 1,000,000  | 10,000,000 |
-| :----------    | :------ | :------ | :-------- | :--------- | :--------- |
-| Laikas (s)  | 0.0005 | 0.0043 | 0.0585   | 0.520   | 2.758    |
-### Studentų išvedimo laikai
-| Studentų sk.       | 1000    | 10,000  | 100,000   | 1,000,000  | 10,000,000 |
-| :----------    | :------ | :------ | :-------- | :--------- | :--------- |
-| Laikas (s)  | 0.02 | 0.0516 | 0.4146   | 3.766    |37.2427   |
+#### 1 Strategija
+
+Konteinerio skirstymo laikas (s) į du naujus to paties tipo konteinerius. 
+| Konteineriai             | 1.000 | 10.000 | 100.000 | 1.000.000 |
+| :---------------------------- | :------ | :------ | :-------- | :--------- | 
+| vector  | 0.0090 | 0.0084 | 0.0779   | 0.8325   |
+| list  | 0.0086 | 0.0074 | 0.0814   | 0.7634    |
+| deque | 0.0090 | 0.0069 | 0.0649   | 0.6149    | 
+
+---
+
+#### 2 Strategija
+
+Konteinerio skirstymo laikas (s), kai sename konteineryje paliekami pažengę studentai, o į naują perkeliami atsilikę studentai.
+
+| Konteineriai  | 1.000  | 10.000  | 100.000 | 1.000.000 | 
+| :---------------------------- | :------ | :------ | :-------- | :--------- |
+| vector | 0.0094 | 0.0097 | 0.0928  | 0.9704   | 
+| list  | 0.0024 | 0.0106 | 0.1059   | 0.9539    | 
+| deque| 0.0016 | 0.0094 | 0.0991   | 0.9475    | 
 
 ---
 Spartos tikrinimas naudojant skirtingus konteinerių tipus.
@@ -67,14 +71,7 @@ Spartos tikrinimas naudojant skirtingus konteinerių tipus.
 | std::list   | 0.11495 | 0.09494 | 0.67161   | 6.55124    | 69.6191    |
 | std::vector | 0.11393 | 0.07797 | 0.68260   | 6.57023    | 69.2707    |
 
-# Duomenų rūšiavimo laikai
-
-| Container   | 1.000   | 10.000  | 100.000   | 1.000.000  | 10.000.000 |
-| :---------- | :------ | :------ | :-------- | :--------  | :--------  | 
-| std::deque  | 0.00800 | 0.00599 | 0.06597   | 0.68760    | 10.8864    |
-| std::list   | 0.00900 | 0.00899 | 0.08095   | 0.778534   | 8.70099    |
-| std::vector | 0.00899 | 0.00699 | 0.08095   | 0.883492   | 8.30024    |
-
+---
 Spartos tikrinimas atliktas su Processor	Intel(R) Core(TM) i5-4210U CPU @ 1.70GHz, 2401 Mhz, 2 Core(s), 6 GB, 
 
 
