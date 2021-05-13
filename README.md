@@ -40,24 +40,59 @@ Vardenis    Pavardenis      5.25
 ```
 
 Galutinis vidurkis yra apskaičiuojamas pagal formulę `galutinis = 0.4 * vidurkis + 0.6 * egzaminas`.
-### Duomenų generavimo laikai
-| Studentų sk.       | 1000    | 10,000  | 100,000   | 1,000,000  | 10,000,000 |
-| :----------    | :------ | :------ | :-------- | :--------- | :--------- |
-| Laikas (s)  | 0.0165 | 0.0505 | 0.47   | 4.8615    | 39.259    |
-### Duomenų skaitymo laikai
-| Studentų sk.       | 1000    | 10,000  | 100,000   | 1,000,000  | 10,000,000 |
-| :----------    | :------ | :------ | :-------- | :--------- | :--------- |
-| Laikas (s)  | 0.003 | 0.023 | 0.2235   | 2.207    | 12.2178    |
-### Studentų rūšiavimo laikai
-| Studentų sk.       | 1000    | 10,000  | 100,000   | 1,000,000  | 10,000,000 |
-| :----------    | :------ | :------ | :-------- | :--------- | :--------- |
-| Laikas (s)  | 0.0005 | 0.0043 | 0.0585   | 0.520   | 2.758    |
-### Studentų išvedimo laikai
-| Studentų sk.       | 1000    | 10,000  | 100,000   | 1,000,000  | 10,000,000 |
-| :----------    | :------ | :------ | :-------- | :--------- | :--------- |
-| Laikas (s)  | 0.02 | 0.0516 | 0.4146   | 3.766    |37.2427   |
+#### 1 Strategija (O1)
+
+Konteinerio skirstymo laikas (s) į du naujus to paties tipo konteinerius. 
+| Konteineriai             |  10.000 | 100.000 | 1.000.000 |
+| :---------------------------- |:------ | :-------- | :--------- | 
+| vector  |  0.0026 | 0.0229   | 0.2579   |
+| list  |  0.0028 | 0.0223   | 0.2637    |
+| deque |  0.0016 | 0.0165   | 0.1648    | 
 
 ---
+
+#### 1 Strategija (O2)
+
+Konteinerio skirstymo laikas (s) į du naujus to paties tipo konteinerius. 
+| Konteineriai             |  10.000 | 100.000 | 1.000.000 |
+| :---------------------------- |:------ | :-------- | :--------- | 
+| vector  |  0.0019 | 0.0250   | 0.2049   |
+| list  |  0.0025 | 0.0284   | 0.2580    |
+| deque |  0.0016 | 0.0183   | 0.1739    | 
+
+---
+
+#### 1 Strategija (O3)
+
+Konteinerio skirstymo laikas (s) į du naujus to paties tipo konteinerius. 
+| Konteineriai             |  10.000 | 100.000 | 1.000.000 |
+| :---------------------------- |:------ | :-------- | :--------- | 
+| vector  |  0.0019 | 0.0220   | 0.2070   |
+| list  |  0.0025 | 0.0265   | 0.2530    |
+| deque |  0.0014 | 0.0184   | 0.1590    | 
+
+---
+
+#### 2 Strategija (O2)
+
+Konteinerio skirstymo laikas (s), kai sename konteineryje paliekami pažengę studentai, o į naują perkeliami atsilikę studentai.
+| Konteineriai              | 10.000 | 100.000 | 1.000.000 |
+| :---------------------------- | :------ | :-------- | :--------- | 
+| vector  | 0.0024 | 0.0265   | 0.2280   |
+| list  |  0.0024 | 0.0260   | 0.2315    |
+| deque |  0.0024 | 0.0274   | 0.2525    | 
+
+---
+
+#### Klasių ir struktūrų palyginimas (1 Strategija, deque)
+
+|             |  10.000 | 100.000 | 1.000.000 |
+| :---------------------------- | :------ | :-------- | :--------- | 
+| Klasė   | 0.0014 | 0.0180   | 0.1649   |
+| Struktūra  | 0.0059 | 0.0609   | 0.5859    |
+
+---
+
 Spartos tikrinimas naudojant skirtingus konteinerių tipus.
 
 # Duomenų skaitymo laikai
@@ -67,15 +102,7 @@ Spartos tikrinimas naudojant skirtingus konteinerių tipus.
 | std::list   | 0.11495 | 0.09494 | 0.67161   | 6.55124    | 69.6191    |
 | std::vector | 0.11393 | 0.07797 | 0.68260   | 6.57023    | 69.2707    |
 
-# Duomenų rūšiavimo laikai
-
-| Container   | 1.000   | 10.000  | 100.000   | 1.000.000  | 10.000.000 |
-| :---------- | :------ | :------ | :-------- | :--------  | :--------  | 
-| std::deque  | 0.00800 | 0.00599 | 0.06597   | 0.68760    | 10.8864    |
-| std::list   | 0.00900 | 0.00899 | 0.08095   | 0.778534   | 8.70099    |
-| std::vector | 0.00899 | 0.00699 | 0.08095   | 0.883492   | 8.30024    |
-
-Spartos tikrinimas atliktas su Processor	Intel(R) Core(TM) i5-4210U CPU @ 1.70GHz, 2401 Mhz, 2 Core(s), 6 GB, 
+Spartos tikrinimas atliktas su Processor	Intel(R) Core(TM) i5-4210U CPU @ 1.70GHz, 2401 Mhz, 6 GB, 
 
 
 ## Programos diegimas ir paleidimas
@@ -92,3 +119,4 @@ Spartos tikrinimas atliktas su Processor	Intel(R) Core(TM) i5-4210U CPU @ 1.70GH
 - [v0.4](https://github.com/PovilasRandis/2laboratorinis/releases/tag/v0.4) Šioje versijoje buvo pridėta galimybė generuoti duomenų failus, studentai pagal savo galutinį balą skirstomi į 2 grupes("Kietus" ir "Minkštus"). Taip pat matuojamas tam tikrų operacijų atlikimo laikas.
 - [v0.5](https://github.com/PovilasRandis/2laboratorinis/releases/tag/v0.5) Šioje versijoje buvo pridėta galimybė duomenis saugoti į skirtingus konteinerių tipus.
 - [v1.0](https://github.com/PovilasRandis/2laboratorinis/releases/tag/v1.0) Šioje versijoje buvo pridėta galimybė skirstyti studentus dviems būdais.
+- [v1.1](https://github.com/PovilasRandis/2laboratorinis/releases/tag/v1.1) Šioje versijoje duomenys laikomi klasėse, o ne struktūrose.
